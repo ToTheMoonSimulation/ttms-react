@@ -32,7 +32,7 @@ const Header = () => {
                         component="div"
                         sx={{ flexGrow: 1 }}
                     >
-                        Music Cookie
+                        To The Moon Simulation
                     </Typography>
 
                     {/* 로그인 버튼 */}
