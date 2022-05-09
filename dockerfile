@@ -1,4 +1,14 @@
-FROM nginx:latest
+FROM node:alpine as builder
 
-EXPOSE 80
-COPY ./build /usr/share/nginx/html
+WORKDIR /app
+
+COPY . .
+
+RUN npm ci
+
+RUN npm run build
+
+FROM nginx
+EXPOSE 3000 
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/build  /usr/share/nginx/html

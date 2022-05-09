@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Button from '@mui/material/Button';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { DataGrid } from '@mui/x-data-grid';
 
 import waveSvg from "../../../assets/wave.svg";
 const Contents = () => {

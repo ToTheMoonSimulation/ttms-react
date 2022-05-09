@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { LicenseInfo } from '@mui/x-license-pro';
+
+LicenseInfo.setLicenseKey(
+  'x0jTPl0USVkVZV0SsMjM1kDNyADM5cjM2ETPZJVSQhVRsIDN0YTM6IVREJ1T0b9586ef25c9853decfa7709eee27a1e',
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
