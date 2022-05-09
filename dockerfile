@@ -1,4 +1,4 @@
 FROM nginx:latest
 
-EXPOSE 8081
+EXPOSE 80
 COPY ./build /usr/share/nginx/html
