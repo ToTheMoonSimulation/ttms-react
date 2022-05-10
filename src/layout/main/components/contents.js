@@ -9,6 +9,10 @@ import waveSvg from "../../../assets/wave.svg";
 const Contents = () => {
     const onClickPlay = () => {
         console.log("A");
+    };
+
+    useEffect( () => {
+        console.log("useEffect");
         axios
             .get("/api/users/test")
             .then((Response) => {
@@ -17,10 +21,6 @@ const Contents = () => {
             .catch((Error) => {
                 console.log(Error);
             });
-    };
-
-    useEffect( () => {
-        console.log("useEffect");
     },[]);
     return (
         <>
