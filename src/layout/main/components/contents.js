@@ -44,7 +44,7 @@ const Contents = () => {
                 }}
             >
                 <Grid item sx={{ color: "white", textAlign: "center" }}>
-                    <h1>Investment Game For Crypto Currency💸</h1>
+                    <h1>Meet People</h1>
                     <h1>Try Free</h1>
                 </Grid>
                 <Grid item>

@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import LoginIcon from "@mui/icons-material/Login";
 import Tooltip from "@mui/material/Tooltip";
-import LogoImg from "../../../assets/logo.png";
+import LogoImg from "../../../assets/logo-meta.png";
 
 const Header = () => {
     return (
@@ -32,7 +32,7 @@ const Header = () => {
                         component="div"
                         sx={{ flexGrow: 1 }}
                     >
-                        To The Moon Simulation
+                        Meta Meet
                     </Typography>
 
                     {/* 로그인 버튼 */}
