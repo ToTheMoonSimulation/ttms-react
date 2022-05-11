@@ -22,30 +22,7 @@ const Contents = () => {
             .catch((Error) => {
                 console.log(Error);
             });
-
-        const ws = new WebSocket("wss://api.upbit.com/websocket/v1");
-        ws.binaryType = "arraybuffer";
-        ws.onopen = () => {
-            var msg = [
-                {
-                    ticket: "TEST",
-                },
-
-                {
-                    type: "ticker",
-                    codes: ["KRW-BTC", "KRW-DOGE", "KRW-ETH"],
-                    isOnlyRealtime: true,
-                },
-            ];
-            msg = JSON.stringify(msg);
-            ws.send(msg);
-        };
-        ws.onmessage = (e) => {
-            var enc = new TextDecoder("utf-8");
-            var arr = new Uint8Array(e.data);
-            var data = JSON.parse(enc.decode(arr));
-            //console.log(data);
-        };
+        
         return () => {
             console.log("컴포넌트가 화면에서 사라짐");
         };
@@ -80,7 +57,7 @@ const Contents = () => {
                     </Button>
                 </Grid>
 
-                <Grid Item>
+                <Grid item>
                     <Chart tickets={["KRW-BTC", "KRW-DOGE", "KRW-ETH"]}></Chart>
                 </Grid>
             </Grid>
